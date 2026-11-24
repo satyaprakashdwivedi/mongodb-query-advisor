@@ -127,8 +127,9 @@ class TestIndexHygiene(unittest.TestCase):
         redundant = next(f for f in result["findings"] if f["id"] == "redundant-index")
         self.assertIn("customer_id_1 is a prefix of customer_id_1_created_at_-1", redundant["title"])
         unused = next(f for f in result["findings"] if f["id"] == "unused-index")
-        self.assertIn("region_1_sku_1", unused["title"])
-        self.assertNotIn("sku_1,", unused["title"])
+        names = set(unused["title"].split(": ", 1)[1].split(", "))
+        self.assertIn("region_1_sku_1", names)
+        self.assertNotIn("sku_1", names)  # used by the workload
 
     def test_existing_index_is_not_recommended_again(self):
         shape_index = [("customer_id", 1)]
