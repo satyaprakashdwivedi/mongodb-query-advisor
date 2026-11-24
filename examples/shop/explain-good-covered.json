@@ -1,0 +1,351 @@
+{
+ "explainVersion": "1",
+ "queryPlanner": {
+  "namespace": "shop.orders",
+  "parsedQuery": {
+   "customer_id": {
+    "$eq": "c42"
+   }
+  },
+  "indexFilterSet": false,
+  "queryHash": "4D65DDEE",
+  "planCacheShapeHash": "4D65DDEE",
+  "planCacheKey": "3E8FF3B3",
+  "optimizationTimeMillis": 0,
+  "maxIndexedOrSolutionsReached": false,
+  "maxIndexedAndSolutionsReached": false,
+  "maxScansToExplodeReached": false,
+  "prunedSimilarIndexes": false,
+  "winningPlan": {
+   "isCached": false,
+   "stage": "PROJECTION_COVERED",
+   "transformBy": {
+    "_id": 0,
+    "customer_id": 1,
+    "created_at": 1
+   },
+   "inputStage": {
+    "stage": "IXSCAN",
+    "keyPattern": {
+     "customer_id": 1,
+     "created_at": -1
+    },
+    "indexName": "customer_id_1_created_at_-1",
+    "isMultiKey": false,
+    "multiKeyPaths": {
+     "customer_id": [],
+     "created_at": []
+    },
+    "isUnique": false,
+    "isSparse": false,
+    "isPartial": false,
+    "indexVersion": 2,
+    "direction": "forward",
+    "indexBounds": {
+     "customer_id": [
+      "[\"c42\", \"c42\"]"
+     ],
+     "created_at": [
+      "[MaxKey, MinKey]"
+     ]
+    }
+   }
+  },
+  "rejectedPlans": [
+   {
+    "isCached": false,
+    "stage": "SORT",
+    "sortPattern": {
+     "created_at": -1
+    },
+    "memLimit": 104857600,
+    "type": "simple",
+    "inputStage": {
+     "stage": "PROJECTION_SIMPLE",
+     "transformBy": {
+      "_id": 0,
+      "customer_id": 1,
+      "created_at": 1
+     },
+     "inputStage": {
+      "stage": "FETCH",
+      "inputStage": {
+       "stage": "IXSCAN",
+       "keyPattern": {
+        "customer_id": 1
+       },
+       "indexName": "customer_id_1",
+       "isMultiKey": false,
+       "multiKeyPaths": {
+        "customer_id": []
+       },
+       "isUnique": false,
+       "isSparse": false,
+       "isPartial": false,
+       "indexVersion": 2,
+       "direction": "forward",
+       "indexBounds": {
+        "customer_id": [
+         "[\"c42\", \"c42\"]"
+        ]
+       }
+      }
+     }
+    }
+   }
+  ]
+ },
+ "executionStats": {
+  "executionSuccess": true,
+  "nReturned": 9,
+  "executionTimeMillis": 0,
+  "totalKeysExamined": 9,
+  "totalDocsExamined": 0,
+  "executionStages": {
+   "isCached": false,
+   "stage": "PROJECTION_COVERED",
+   "nReturned": 9,
+   "executionTimeMillisEstimate": 0,
+   "works": 11,
+   "advanced": 9,
+   "needTime": 0,
+   "needYield": 0,
+   "saveState": 0,
+   "restoreState": 0,
+   "isEOF": 1,
+   "transformBy": {
+    "_id": 0,
+    "customer_id": 1,
+    "created_at": 1
+   },
+   "inputStage": {
+    "stage": "IXSCAN",
+    "nReturned": 9,
+    "executionTimeMillisEstimate": 0,
+    "works": 11,
+    "advanced": 9,
+    "needTime": 0,
+    "needYield": 0,
+    "saveState": 0,
+    "restoreState": 0,
+    "isEOF": 1,
+    "keyPattern": {
+     "customer_id": 1,
+     "created_at": -1
+    },
+    "indexName": "customer_id_1_created_at_-1",
+    "isMultiKey": false,
+    "multiKeyPaths": {
+     "customer_id": [],
+     "created_at": []
+    },
+    "isUnique": false,
+    "isSparse": false,
+    "isPartial": false,
+    "indexVersion": 2,
+    "direction": "forward",
+    "indexBounds": {
+     "customer_id": [
+      "[\"c42\", \"c42\"]"
+     ],
+     "created_at": [
+      "[MaxKey, MinKey]"
+     ]
+    },
+    "keysExamined": 9,
+    "seeks": 1,
+    "dupsTested": 0,
+    "dupsDropped": 0
+   }
+  },
+  "allPlansExecution": [
+   {
+    "nReturned": 9,
+    "executionTimeMillisEstimate": 0,
+    "totalKeysExamined": 9,
+    "totalDocsExamined": 0,
+    "score": 2.9002999999999997,
+    "executionStages": {
+     "isCached": false,
+     "stage": "PROJECTION_COVERED",
+     "nReturned": 9,
+     "executionTimeMillisEstimate": 0,
+     "works": 10,
+     "advanced": 9,
+     "needTime": 0,
+     "needYield": 0,
+     "saveState": 0,
+     "restoreState": 0,
+     "isEOF": 1,
+     "transformBy": {
+      "_id": 0,
+      "customer_id": 1,
+      "created_at": 1
+     },
+     "inputStage": {
+      "stage": "IXSCAN",
+      "nReturned": 9,
+      "executionTimeMillisEstimate": 0,
+      "works": 10,
+      "advanced": 9,
+      "needTime": 0,
+      "needYield": 0,
+      "saveState": 0,
+      "restoreState": 0,
+      "isEOF": 1,
+      "keyPattern": {
+       "customer_id": 1,
+       "created_at": -1
+      },
+      "indexName": "customer_id_1_created_at_-1",
+      "isMultiKey": false,
+      "multiKeyPaths": {
+       "customer_id": [],
+       "created_at": []
+      },
+      "isUnique": false,
+      "isSparse": false,
+      "isPartial": false,
+      "indexVersion": 2,
+      "direction": "forward",
+      "indexBounds": {
+       "customer_id": [
+        "[\"c42\", \"c42\"]"
+       ],
+       "created_at": [
+        "[MaxKey, MinKey]"
+       ]
+      },
+      "keysExamined": 9,
+      "seeks": 1,
+      "dupsTested": 0,
+      "dupsDropped": 0
+     }
+    }
+   },
+   {
+    "nReturned": 0,
+    "executionTimeMillisEstimate": 0,
+    "totalKeysExamined": 9,
+    "totalDocsExamined": 9,
+    "score": 1.0001,
+    "executionStages": {
+     "isCached": false,
+     "stage": "SORT",
+     "nReturned": 0,
+     "executionTimeMillisEstimate": 0,
+     "works": 10,
+     "advanced": 0,
+     "needTime": 10,
+     "needYield": 0,
+     "saveState": 1,
+     "restoreState": 0,
+     "isEOF": 0,
+     "sortPattern": {
+      "created_at": -1
+     },
+     "memLimit": 104857600,
+     "type": "simple",
+     "totalDataSizeSorted": 702,
+     "usedDisk": false,
+     "spills": 0,
+     "spilledDataStorageSize": 0,
+     "inputStage": {
+      "stage": "PROJECTION_SIMPLE",
+      "nReturned": 9,
+      "executionTimeMillisEstimate": 0,
+      "works": 10,
+      "advanced": 9,
+      "needTime": 0,
+      "needYield": 0,
+      "saveState": 1,
+      "restoreState": 0,
+      "isEOF": 1,
+      "transformBy": {
+       "_id": 0,
+       "customer_id": 1,
+       "created_at": 1
+      },
+      "inputStage": {
+       "stage": "FETCH",
+       "nReturned": 9,
+       "executionTimeMillisEstimate": 0,
+       "works": 10,
+       "advanced": 9,
+       "needTime": 0,
+       "needYield": 0,
+       "saveState": 1,
+       "restoreState": 0,
+       "isEOF": 1,
+       "docsExamined": 9,
+       "alreadyHasObj": 0,
+       "inputStage": {
+        "stage": "IXSCAN",
+        "nReturned": 9,
+        "executionTimeMillisEstimate": 0,
+        "works": 10,
+        "advanced": 9,
+        "needTime": 0,
+        "needYield": 0,
+        "saveState": 1,
+        "restoreState": 0,
+        "isEOF": 1,
+        "keyPattern": {
+         "customer_id": 1
+        },
+        "indexName": "customer_id_1",
+        "isMultiKey": false,
+        "multiKeyPaths": {
+         "customer_id": []
+        },
+        "isUnique": false,
+        "isSparse": false,
+        "isPartial": false,
+        "indexVersion": 2,
+        "direction": "forward",
+        "indexBounds": {
+         "customer_id": [
+          "[\"c42\", \"c42\"]"
+         ]
+        },
+        "keysExamined": 9,
+        "seeks": 1,
+        "dupsTested": 0,
+        "dupsDropped": 0
+       }
+      }
+     }
+    }
+   }
+  ]
+ },
+ "queryShapeHash": "B4591D6811CF79ECEC8B9662BBDB09025C28AD490052C05C3F48541F8E980193",
+ "command": {
+  "find": "orders",
+  "filter": {
+   "customer_id": "c42"
+  },
+  "sort": {
+   "created_at": -1
+  },
+  "projection": {
+   "_id": 0,
+   "customer_id": 1,
+   "created_at": 1
+  },
+  "$db": "shop"
+ },
+ "serverParameters": {
+  "internalQueryFacetBufferSizeBytes": 104857600,
+  "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+  "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+  "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+  "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+  "internalQueryProhibitBlockingMergeOnMongoS": 0,
+  "internalQueryMaxAddToSetBytes": 104857600,
+  "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+  "internalQueryFrameworkControl": "trySbeRestricted",
+  "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+ },
+ "ok": 1.0
+}

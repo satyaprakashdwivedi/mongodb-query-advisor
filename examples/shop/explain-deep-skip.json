@@ -1,0 +1,168 @@
+{
+ "explainVersion": "1",
+ "queryPlanner": {
+  "namespace": "shop.orders",
+  "parsedQuery": {},
+  "indexFilterSet": false,
+  "queryHash": "F37FAD2D",
+  "planCacheShapeHash": "F37FAD2D",
+  "planCacheKey": "C8A9BD99",
+  "optimizationTimeMillis": 0,
+  "maxIndexedOrSolutionsReached": false,
+  "maxIndexedAndSolutionsReached": false,
+  "maxScansToExplodeReached": false,
+  "prunedSimilarIndexes": false,
+  "winningPlan": {
+   "isCached": false,
+   "stage": "LIMIT",
+   "limitAmount": 20,
+   "inputStage": {
+    "stage": "FETCH",
+    "inputStage": {
+     "stage": "SKIP",
+     "skipAmount": 50000,
+     "inputStage": {
+      "stage": "IXSCAN",
+      "keyPattern": {
+       "created_at": 1,
+       "status": 1
+      },
+      "indexName": "created_at_1_status_1",
+      "isMultiKey": false,
+      "multiKeyPaths": {
+       "created_at": [],
+       "status": []
+      },
+      "isUnique": false,
+      "isSparse": false,
+      "isPartial": false,
+      "indexVersion": 2,
+      "direction": "forward",
+      "indexBounds": {
+       "created_at": [
+        "[MinKey, MaxKey]"
+       ],
+       "status": [
+        "[MinKey, MaxKey]"
+       ]
+      }
+     }
+    }
+   }
+  },
+  "rejectedPlans": []
+ },
+ "executionStats": {
+  "executionSuccess": true,
+  "nReturned": 20,
+  "executionTimeMillis": 8,
+  "totalKeysExamined": 50020,
+  "totalDocsExamined": 20,
+  "executionStages": {
+   "isCached": false,
+   "stage": "LIMIT",
+   "nReturned": 20,
+   "executionTimeMillisEstimate": 3,
+   "works": 50021,
+   "advanced": 20,
+   "needTime": 50000,
+   "needYield": 0,
+   "saveState": 0,
+   "restoreState": 0,
+   "isEOF": 1,
+   "limitAmount": 20,
+   "inputStage": {
+    "stage": "FETCH",
+    "nReturned": 20,
+    "executionTimeMillisEstimate": 3,
+    "works": 50020,
+    "advanced": 20,
+    "needTime": 50000,
+    "needYield": 0,
+    "saveState": 0,
+    "restoreState": 0,
+    "isEOF": 0,
+    "docsExamined": 20,
+    "alreadyHasObj": 0,
+    "inputStage": {
+     "stage": "SKIP",
+     "nReturned": 20,
+     "executionTimeMillisEstimate": 3,
+     "works": 50020,
+     "advanced": 20,
+     "needTime": 50000,
+     "needYield": 0,
+     "saveState": 0,
+     "restoreState": 0,
+     "isEOF": 0,
+     "skipAmount": 50000,
+     "inputStage": {
+      "stage": "IXSCAN",
+      "nReturned": 50020,
+      "executionTimeMillisEstimate": 3,
+      "works": 50020,
+      "advanced": 50020,
+      "needTime": 0,
+      "needYield": 0,
+      "saveState": 0,
+      "restoreState": 0,
+      "isEOF": 0,
+      "keyPattern": {
+       "created_at": 1,
+       "status": 1
+      },
+      "indexName": "created_at_1_status_1",
+      "isMultiKey": false,
+      "multiKeyPaths": {
+       "created_at": [],
+       "status": []
+      },
+      "isUnique": false,
+      "isSparse": false,
+      "isPartial": false,
+      "indexVersion": 2,
+      "direction": "forward",
+      "indexBounds": {
+       "created_at": [
+        "[MinKey, MaxKey]"
+       ],
+       "status": [
+        "[MinKey, MaxKey]"
+       ]
+      },
+      "keysExamined": 50020,
+      "seeks": 1,
+      "dupsTested": 0,
+      "dupsDropped": 0
+     }
+    }
+   }
+  },
+  "allPlansExecution": []
+ },
+ "queryShapeHash": "41B26FDE71069A41F65146B2DC4FA8372840EBD66DA85A50BED954449C9B31CC",
+ "command": {
+  "find": "orders",
+  "filter": {},
+  "sort": {
+   "created_at": 1
+  },
+  "skip": 50000,
+  "limit": 20,
+  "singleBatch": true,
+  "$db": "shop"
+ },
+ "serverParameters": {
+  "internalQueryFacetBufferSizeBytes": 104857600,
+  "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+  "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+  "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+  "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+  "internalQueryProhibitBlockingMergeOnMongoS": 0,
+  "internalQueryMaxAddToSetBytes": 104857600,
+  "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+  "internalQueryFrameworkControl": "trySbeRestricted",
+  "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+ },
+ "ok": 1.0
+}

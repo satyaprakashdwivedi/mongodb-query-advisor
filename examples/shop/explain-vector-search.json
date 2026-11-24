@@ -1,0 +1,231 @@
+{
+ "explainVersion": "1",
+ "stages": [
+  {
+   "$vectorSearch": {
+    "index": "product_vectors",
+    "path": "embedding",
+    "queryVector": "redacted",
+    "numCandidates": 10,
+    "limit": 10,
+    "explain": {
+     "query": {
+      "type": "WrappedKnnQuery",
+      "args": {
+       "query": [
+        {
+         "type": "InstrumentableKnnFloatVectorQuery",
+         "args": {
+          "field": "$type:knnVector/embedding",
+          "k": 10
+         },
+         "stats": {
+          "context": {
+           "millisElapsed": 0.0
+          },
+          "match": {
+           "millisElapsed": 0.0
+          },
+          "score": {
+           "millisElapsed": 0.0
+          }
+         }
+        },
+        {
+         "type": "WrappedKnnQuery",
+         "args": {
+          "query": [
+           {
+            "type": "DocAndScoreQuery",
+            "args": {},
+            "stats": {
+             "context": {
+              "millisElapsed": 0.0
+             },
+             "match": {
+              "millisElapsed": 0.0
+             },
+             "score": {
+              "millisElapsed": 0.0
+             }
+            }
+           }
+          ]
+         },
+         "stats": {
+          "context": {
+           "millisElapsed": 2.603091,
+           "invocationCounts": {
+            "createWeight": 1,
+            "createScorer": 2
+           }
+          },
+          "match": {
+           "millisElapsed": 0.0
+          },
+          "score": {
+           "millisElapsed": 0.0
+          }
+         }
+        }
+       ]
+      },
+      "stats": {
+       "context": {
+        "millisElapsed": 18.457295,
+        "invocationCounts": {
+         "vectorExecution": 1,
+         "createWeight": 1,
+         "createScorer": 2
+        }
+       },
+       "match": {
+        "millisElapsed": 0.0
+       },
+       "score": {
+        "millisElapsed": 0.0
+       }
+      }
+     },
+     "collectors": {
+      "allCollectorStats": {
+       "millisElapsed": 0.020916,
+       "invocationCounts": {
+        "collect": 10,
+        "competitiveIterator": 2,
+        "setScorer": 2
+       }
+      }
+     },
+     "metadata": {
+      "mongotVersion": "1.80.0",
+      "mongotHostName": "mongot-local-dev",
+      "indexName": "product_vectors",
+      "lucene": {
+       "totalSegments": 2,
+       "totalDocs": 3000
+      }
+     },
+     "resourceUsage": {
+      "majorFaults": 0,
+      "minorFaults": 5,
+      "userTimeMs": 0,
+      "systemTimeMs": 0,
+      "maxReportingThreads": 1,
+      "numBatches": 1
+     },
+     "luceneVectorSegmentStats": [
+      {
+       "id": "_0",
+       "executionType": "Approximate",
+       "docCount": 1468,
+       "visitedDocCount": 159,
+       "approximateStage": {
+        "millisElapsed": 1.316107
+       }
+      },
+      {
+       "id": "_1",
+       "executionType": "Approximate",
+       "docCount": 1532,
+       "visitedDocCount": 150,
+       "approximateStage": {
+        "millisElapsed": 11.589428
+       }
+      }
+     ],
+     "featureFlags": [
+      {
+       "featureFlag": "mongot.featureFlag.enableVectorSearchQueryTimeout",
+       "evaluationResult": false,
+       "decisiveField": "Fallback"
+      }
+     ]
+    }
+   },
+   "nReturned": 0,
+   "executionTimeMillisEstimate": 99
+  },
+  {
+   "$_internalSearchIdLookup": {
+    "limit": 10
+   },
+   "nReturned": 0,
+   "executionTimeMillisEstimate": 99
+  },
+  {
+   "$match": {
+    "category": {
+     "$eq": "shoes"
+    }
+   },
+   "nReturned": 0,
+   "executionTimeMillisEstimate": 99
+  },
+  {
+   "$project": {
+    "_id": true,
+    "sku": true,
+    "category": true,
+    "score": {
+     "$meta": "vectorSearchScore"
+    }
+   },
+   "nReturned": 0,
+   "executionTimeMillisEstimate": 99
+  }
+ ],
+ "queryShapeHash": "8BF824848C4105C26C205F766531679E4950CA57CD626B7D6ADA1EB68A6303F0",
+ "serverParameters": {
+  "internalQueryFacetBufferSizeBytes": 104857600,
+  "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+  "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+  "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+  "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+  "internalQueryProhibitBlockingMergeOnMongoS": 0,
+  "internalQueryMaxAddToSetBytes": 104857600,
+  "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+  "internalQueryFrameworkControl": "trySbeRestricted",
+  "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+ },
+ "command": {
+  "aggregate": "products",
+  "pipeline": [
+   {
+    "$vectorSearch": {
+     "index": "product_vectors",
+     "path": "embedding",
+     "queryVector": [
+      0.1,
+      -0.2,
+      0.3,
+      0.05,
+      -0.4,
+      0.2,
+      0.0,
+      0.1
+     ],
+     "numCandidates": 10,
+     "limit": 10
+    }
+   },
+   {
+    "$match": {
+     "category": "shoes"
+    }
+   },
+   {
+    "$project": {
+     "sku": 1,
+     "category": 1,
+     "score": {
+      "$meta": "vectorSearchScore"
+     }
+    }
+   }
+  ],
+  "cursor": {},
+  "$db": "shop"
+ },
+ "ok": 1.0
+}

@@ -1,0 +1,82 @@
+{
+ "explainVersion": "1",
+ "queryPlanner": {
+  "namespace": "shop.orders",
+  "parsedQuery": {
+   "amount": {
+    "$gte": 499.5
+   }
+  },
+  "indexFilterSet": false,
+  "queryHash": "A6CC43B9",
+  "planCacheShapeHash": "A6CC43B9",
+  "planCacheKey": "566B45C8",
+  "optimizationTimeMillis": 0,
+  "maxIndexedOrSolutionsReached": false,
+  "maxIndexedAndSolutionsReached": false,
+  "maxScansToExplodeReached": false,
+  "prunedSimilarIndexes": false,
+  "winningPlan": {
+   "isCached": false,
+   "stage": "COLLSCAN",
+   "filter": {
+    "amount": {
+     "$gte": 499.5
+    }
+   },
+   "direction": "forward"
+  },
+  "rejectedPlans": []
+ },
+ "executionStats": {
+  "executionSuccess": true,
+  "nReturned": 213,
+  "executionTimeMillis": 25,
+  "totalKeysExamined": 0,
+  "totalDocsExamined": 200000,
+  "executionStages": {
+   "isCached": false,
+   "stage": "COLLSCAN",
+   "filter": {
+    "amount": {
+     "$gte": 499.5
+    }
+   },
+   "nReturned": 213,
+   "executionTimeMillisEstimate": 18,
+   "works": 200001,
+   "advanced": 213,
+   "needTime": 199787,
+   "needYield": 0,
+   "saveState": 1,
+   "restoreState": 1,
+   "isEOF": 1,
+   "direction": "forward",
+   "docsExamined": 200000
+  },
+  "allPlansExecution": []
+ },
+ "queryShapeHash": "243EB306D8FF82BA73B2EAD6E94C91970A912D4C6CE7425662E8D10420163985",
+ "command": {
+  "find": "orders",
+  "filter": {
+   "amount": {
+    "$gte": 499.5
+   }
+  },
+  "$db": "shop"
+ },
+ "serverParameters": {
+  "internalQueryFacetBufferSizeBytes": 104857600,
+  "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+  "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+  "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+  "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+  "internalQueryProhibitBlockingMergeOnMongoS": 0,
+  "internalQueryMaxAddToSetBytes": 104857600,
+  "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+  "internalQueryFrameworkControl": "trySbeRestricted",
+  "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+ },
+ "ok": 1.0
+}

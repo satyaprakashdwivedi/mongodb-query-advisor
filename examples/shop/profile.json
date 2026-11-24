@@ -1,0 +1,1917 @@
+[
+ {
+  "op": "command",
+  "ns": "shop.orders",
+  "command": {
+   "explain": {
+    "find": "orders",
+    "filter": {
+     "amount": {
+      "$gte": 499.5
+     }
+    }
+   },
+   "lsid": {
+    "id": "b'k\\xbbn\\xe4\\x82\\x8cA\\xa8\\x9b\\xab\\xc9\\xce2\\x8f]\\xac'"
+   },
+   "$clusterTime": {
+    "clusterTime": "Timestamp(1795548880, 8)",
+    "signature": {
+     "hash": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+     "keyId": 0
+    }
+   },
+   "$db": "shop",
+   "$readPreference": {
+    "mode": "primaryPreferred"
+   }
+  },
+  "numYield": 2,
+  "planCacheShapeHash": "A6CC43B9",
+  "queryHash": "A6CC43B9",
+  "planCacheKey": "566B45C8",
+  "queryShapeHash": "243EB306D8FF82BA73B2EAD6E94C91970A912D4C6CE7425662E8D10420163985",
+  "queryFramework": "classic",
+  "locks": {
+   "Global": {
+    "acquireCount": {
+     "r": 4
+    }
+   }
+  },
+  "flowControl": {},
+  "readConcern": {
+   "level": "local",
+   "provenance": "implicitDefault"
+  },
+  "storage": {},
+  "responseLength": 1888,
+  "protocol": "op_msg",
+  "cpuNanos": 24909917,
+  "millis": 24,
+  "planningTimeMicros": 47,
+  "ts": "2026-11-24 19:34:40.307000",
+  "client": "172.17.0.1",
+  "allUsers": [],
+  "user": ""
+ },
+ {
+  "op": "command",
+  "ns": "shop.orders",
+  "command": {
+   "explain": {
+    "find": "orders",
+    "filter": {
+     "sku": {
+      "$regex": "42"
+     }
+    }
+   },
+   "lsid": {
+    "id": "b'k\\xbbn\\xe4\\x82\\x8cA\\xa8\\x9b\\xab\\xc9\\xce2\\x8f]\\xac'"
+   },
+   "$clusterTime": {
+    "clusterTime": "Timestamp(1795548880, 8)",
+    "signature": {
+     "hash": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+     "keyId": 0
+    }
+   },
+   "$db": "shop",
+   "$readPreference": {
+    "mode": "primaryPreferred"
+   }
+  },
+  "numYield": 3,
+  "planCacheShapeHash": "BBE2DD29",
+  "queryHash": "BBE2DD29",
+  "planCacheKey": "F5B5DC7F",
+  "queryShapeHash": "624320D73F3DE0744CC00C2F5F82B411A8143D7851BCE5C8F129A0CFBF0BA201",
+  "queryFramework": "classic",
+  "locks": {
+   "Global": {
+    "acquireCount": {
+     "r": 5
+    }
+   }
+  },
+  "flowControl": {},
+  "readConcern": {
+   "level": "local",
+   "provenance": "implicitDefault"
+  },
+  "storage": {
+   "data": {
+    "bytesRead": 3511146,
+    "timeReadingMicros": 575
+   }
+  },
+  "responseLength": 2583,
+  "protocol": "op_msg",
+  "cpuNanos": 44082708,
+  "millis": 44,
+  "planningTimeMicros": 47,
+  "ts": "2026-11-24 19:34:40.355000",
+  "client": "172.17.0.1",
+  "allUsers": [],
+  "user": ""
+ },
+ {
+  "op": "command",
+  "ns": "shop.orders",
+  "command": {
+   "explain": {
+    "find": "orders",
+    "filter": {},
+    "sort": {
+     "created_at": 1
+    },
+    "skip": 50000,
+    "limit": 20,
+    "singleBatch": true
+   },
+   "lsid": {
+    "id": "b'k\\xbbn\\xe4\\x82\\x8cA\\xa8\\x9b\\xab\\xc9\\xce2\\x8f]\\xac'"
+   },
+   "$clusterTime": {
+    "clusterTime": "Timestamp(1795548880, 8)",
+    "signature": {
+     "hash": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+     "keyId": 0
+    }
+   },
+   "$db": "shop",
+   "$readPreference": {
+    "mode": "primaryPreferred"
+   }
+  },
+  "numYield": 0,
+  "planCacheShapeHash": "F37FAD2D",
+  "queryHash": "F37FAD2D",
+  "planCacheKey": "C8A9BD99",
+  "queryShapeHash": "41B26FDE71069A41F65146B2DC4FA8372840EBD66DA85A50BED954449C9B31CC",
+  "queryFramework": "classic",
+  "locks": {
+   "Global": {
+    "acquireCount": {
+     "r": 2
+    }
+   }
+  },
+  "flowControl": {},
+  "readConcern": {
+   "level": "local",
+   "provenance": "implicitDefault"
+  },
+  "storage": {
+   "data": {
+    "bytesRead": 839954,
+    "timeReadingMicros": 160
+   }
+  },
+  "responseLength": 3185,
+  "protocol": "op_msg",
+  "cpuNanos": 8374042,
+  "millis": 8,
+  "planningTimeMicros": 37,
+  "ts": "2026-11-24 19:34:40.364000",
+  "client": "172.17.0.1",
+  "allUsers": [],
+  "user": ""
+ },
+ {
+  "op": "command",
+  "ns": "shop.orders",
+  "command": {
+   "explain": {
+    "aggregate": "orders",
+    "cursor": {},
+    "pipeline": [
+     {
+      "$match": {
+       "region": "IN",
+       "status": "paid",
+       "amount": {
+        "$gt": 495
+       }
+      }
+     },
+     {
+      "$lookup": {
+       "from": "customers",
+       "localField": "customer_id",
+       "foreignField": "customer_id",
+       "as": "customer"
+      }
+     }
+    ]
+   },
+   "verbosity": "executionStats",
+   "lsid": {
+    "id": "b'k\\xbbn\\xe4\\x82\\x8cA\\xa8\\x9b\\xab\\xc9\\xce2\\x8f]\\xac'"
+   },
+   "$clusterTime": {
+    "clusterTime": "Timestamp(1795548880, 8)",
+    "signature": {
+     "hash": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+     "keyId": 0
+    }
+   },
+   "$db": "shop",
+   "$readPreference": {
+    "mode": "primaryPreferred"
+   }
+  },
+  "numYield": 17,
+  "planCacheShapeHash": "2D74919F",
+  "queryHash": "2D74919F",
+  "planCacheKey": "AC0739F9",
+  "queryShapeHash": "E026F7D998838605EFD360E77C23998E018CDBE5C648C41CA220CF585345FEA9",
+  "queryFramework": "sbe",
+  "locks": {
+   "Global": {
+    "acquireCount": {
+     "r": 19
+    }
+   }
+  },
+  "flowControl": {},
+  "readConcern": {
+   "level": "local",
+   "provenance": "implicitDefault"
+  },
+  "storage": {
+   "data": {
+    "bytesRead": 29478,
+    "timeReadingMicros": 8
+   }
+  },
+  "responseLength": 11472,
+  "protocol": "op_msg",
+  "cpuNanos": 270489166,
+  "millis": 270,
+  "planSummary": "IXSCAN { status: 1, amount: 1, created_at: 1 }",
+  "planningTimeMicros": 1405,
+  "ts": "2026-11-24 19:34:40.639000",
+  "client": "172.17.0.1",
+  "allUsers": [],
+  "user": ""
+ },
+ {
+  "op": "query",
+  "ns": "shop.orders",
+  "command": {
+   "find": "orders",
+   "filter": {
+    "amount": {
+     "$gte": 499.5
+    }
+   },
+   "lsid": {
+    "id": "b'k\\xbbn\\xe4\\x82\\x8cA\\xa8\\x9b\\xab\\xc9\\xce2\\x8f]\\xac'"
+   },
+   "$clusterTime": {
+    "clusterTime": "Timestamp(1795548880, 8)",
+    "signature": {
+     "hash": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+     "keyId": 0
+    }
+   },
+   "$db": "shop",
+   "$readPreference": {
+    "mode": "primaryPreferred"
+   }
+  },
+  "cursorid": 8782382220625248835,
+  "keysExamined": 0,
+  "docsExamined": 95870,
+  "nBatches": 1,
+  "numYield": 0,
+  "nreturned": 101,
+  "planCacheShapeHash": "A6CC43B9",
+  "queryHash": "A6CC43B9",
+  "planCacheKey": "566B45C8",
+  "queryShapeHash": "243EB306D8FF82BA73B2EAD6E94C91970A912D4C6CE7425662E8D10420163985",
+  "queryFramework": "classic",
+  "locks": {
+   "Global": {
+    "acquireCount": {
+     "r": 2
+    }
+   }
+  },
+  "flowControl": {},
+  "readConcern": {
+   "level": "local",
+   "provenance": "implicitDefault"
+  },
+  "storage": {},
+  "responseLength": 14059,
+  "protocol": "op_msg",
+  "cpuNanos": 12164750,
+  "millis": 12,
+  "planSummary": "COLLSCAN",
+  "planningTimeMicros": 56,
+  "execStats": {
+   "isCached": false,
+   "stage": "COLLSCAN",
+   "filter": {
+    "amount": {
+     "$gte": 499.5
+    }
+   },
+   "nReturned": 101,
+   "executionTimeMillisEstimate": 4,
+   "works": 95870,
+   "advanced": 101,
+   "needTime": 95769,
+   "needYield": 0,
+   "saveState": 1,
+   "restoreState": 0,
+   "isEOF": 0,
+   "direction": "forward",
+   "docsExamined": 95870
+  },
+  "ts": "2026-11-24 19:34:40.652000",
+  "client": "172.17.0.1",
+  "allUsers": [],
+  "user": ""
+ },
+ {
+  "op": "getmore",
+  "ns": "shop.orders",
+  "command": {
+   "getMore": 8782382220625248835,
+   "collection": "orders",
+   "lsid": {
+    "id": "b'k\\xbbn\\xe4\\x82\\x8cA\\xa8\\x9b\\xab\\xc9\\xce2\\x8f]\\xac'"
+   },
+   "$clusterTime": {
+    "clusterTime": "Timestamp(1795548880, 8)",
+    "signature": {
+     "hash": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+     "keyId": 0
+    }
+   },
+   "$db": "shop"
+  },
+  "originatingCommand": {
+   "find": "orders",
+   "filter": {
+    "amount": {
+     "$gte": 499.5
+    }
+   },
+   "lsid": {
+    "id": "b'k\\xbbn\\xe4\\x82\\x8cA\\xa8\\x9b\\xab\\xc9\\xce2\\x8f]\\xac'"
+   },
+   "$clusterTime": {
+    "clusterTime": "Timestamp(1795548880, 8)",
+    "signature": {
+     "hash": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+     "keyId": 0
+    }
+   },
+   "$db": "shop",
+   "$readPreference": {
+    "mode": "primaryPreferred"
+   }
+  },
+  "cursorid": 8782382220625248835,
+  "keysExamined": 0,
+  "docsExamined": 104130,
+  "nBatches": 1,
+  "cursorExhausted": true,
+  "numYield": 1,
+  "nreturned": 112,
+  "planCacheShapeHash": "A6CC43B9",
+  "queryHash": "A6CC43B9",
+  "planCacheKey": "566B45C8",
+  "queryFramework": "classic",
+  "locks": {
+   "Global": {
+    "acquireCount": {
+     "r": 3
+    }
+   }
+  },
+  "flowControl": {},
+  "readConcern": {
+   "level": "local",
+   "provenance": "implicitDefault"
+  },
+  "storage": {},
+  "responseLength": 15589,
+  "protocol": "op_msg",
+  "cpuNanos": 13136875,
+  "millis": 13,
+  "planSummary": "COLLSCAN",
+  "execStats": {
+   "isCached": false,
+   "stage": "COLLSCAN",
+   "filter": {
+    "amount": {
+     "$gte": 499.5
+    }
+   },
+   "nReturned": 213,
+   "executionTimeMillisEstimate": 15,
+   "works": 200001,
+   "advanced": 213,
+   "needTime": 199787,
+   "needYield": 0,
+   "saveState": 2,
+   "restoreState": 2,
+   "isEOF": 1,
+   "direction": "forward",
+   "docsExamined": 200000
+  },
+  "ts": "2026-11-24 19:34:40.666000",
+  "client": "172.17.0.1",
+  "allUsers": [],
+  "user": ""
+ },
+ {
+  "op": "getmore",
+  "ns": "shop.orders",
+  "command": {
+   "getMore": 3481922814235055125,
+   "collection": "orders",
+   "lsid": {
+    "id": "b'k\\xbbn\\xe4\\x82\\x8cA\\xa8\\x9b\\xab\\xc9\\xce2\\x8f]\\xac'"
+   },
+   "$clusterTime": {
+    "clusterTime": "Timestamp(1795548880, 8)",
+    "signature": {
+     "hash": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+     "keyId": 0
+    }
+   },
+   "$db": "shop"
+  },
+  "originatingCommand": {
+   "find": "orders",
+   "filter": {
+    "sku": {
+     "$regex": "42"
+    }
+   },
+   "lsid": {
+    "id": "b'k\\xbbn\\xe4\\x82\\x8cA\\xa8\\x9b\\xab\\xc9\\xce2\\x8f]\\xac'"
+   },
+   "$clusterTime": {
+    "clusterTime": "Timestamp(1795548880, 8)",
+    "signature": {
+     "hash": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+     "keyId": 0
+    }
+   },
+   "$db": "shop",
+   "$readPreference": {
+    "mode": "primaryPreferred"
+   }
+  },
+  "cursorid": 3481922814235055125,
+  "keysExamined": 189258,
+  "docsExamined": 3854,
+  "nBatches": 1,
+  "cursorExhausted": true,
+  "numYield": 2,
+  "nreturned": 3854,
+  "planCacheShapeHash": "BBE2DD29",
+  "queryHash": "BBE2DD29",
+  "planCacheKey": "F5B5DC7F",
+  "queryFramework": "classic",
+  "locks": {
+   "Global": {
+    "acquireCount": {
+     "r": 4
+    }
+   }
+  },
+  "flowControl": {},
+  "readConcern": {
+   "level": "local",
+   "provenance": "implicitDefault"
+  },
+  "storage": {},
+  "responseLength": 534227,
+  "protocol": "op_msg",
+  "cpuNanos": 41356166,
+  "millis": 41,
+  "planSummary": "IXSCAN { sku: 1 }",
+  "execStats": {
+   "isCached": false,
+   "stage": "FETCH",
+   "nReturned": 3955,
+   "executionTimeMillisEstimate": 37,
+   "works": 200001,
+   "advanced": 3955,
+   "needTime": 196045,
+   "needYield": 0,
+   "saveState": 3,
+   "restoreState": 3,
+   "isEOF": 1,
+   "docsExamined": 3955,
+   "alreadyHasObj": 0,
+   "inputStage": {
+    "stage": "IXSCAN",
+    "filter": {
+     "sku": {
+      "$regex": "42"
+     }
+    },
+    "nReturned": 3955,
+    "executionTimeMillisEstimate": 37,
+    "works": 200001,
+    "advanced": 3955,
+    "needTime": 196045,
+    "needYield": 0,
+    "saveState": 3,
+    "restoreState": 3,
+    "isEOF": 1,
+    "keyPattern": {
+     "sku": 1
+    },
+    "indexName": "sku_1",
+    "isMultiKey": false,
+    "multiKeyPaths": {
+     "sku": []
+    },
+    "isUnique": false,
+    "isSparse": false,
+    "isPartial": false,
+    "indexVersion": 2,
+    "direction": "forward",
+    "indexBounds": {
+     "sku": [
+      "[\"\", {})",
+      "[/42/, /42/]"
+     ]
+    },
+    "keysExamined": 200000,
+    "seeks": 1,
+    "dupsTested": 0,
+    "dupsDropped": 0
+   }
+  },
+  "ts": "2026-11-24 19:34:40.713000",
+  "client": "172.17.0.1",
+  "allUsers": [],
+  "user": ""
+ },
+ {
+  "op": "command",
+  "ns": "shop.customers",
+  "command": {
+   "aggregate": "customers",
+   "pipeline": [
+    {
+     "$listSearchIndexes": {}
+    },
+    {
+     "$unionWith": {
+      "coll": "products",
+      "pipeline": [
+       {
+        "$listSearchIndexes": {}
+       }
+      ]
+     }
+    },
+    {
+     "$unionWith": {
+      "coll": "orders",
+      "pipeline": [
+       {
+        "$listSearchIndexes": {}
+       }
+      ]
+     }
+    },
+    {
+     "$unionWith": {
+      "coll": "system.profile",
+      "pipeline": [
+       {
+        "$listSearchIndexes": {}
+       }
+      ]
+     }
+    },
+    {
+     "$addFields": {
+      "type": {
+       "$ifNull": [
+        "$type",
+        {
+         "$cond": {
+          "if": {
+           "$ifNull": [
+            "$latestDefinition.mappings",
+            false
+           ]
+          },
+          "then": "search",
+          "else": "vectorSearch"
+         }
+        }
+       ]
+      }
+     }
+    },
+    {
+     "$group": {
+      "_id": "$type",
+      "count": {
+       "$sum": 1
+      }
+     }
+    }
+   ],
+   "cursor": {},
+   "lsid": {
+    "id": "b'\\xa4I<9\\x1d\\x89H\\xa7\\xb2\\xde\\xa3\\xea_\\xccH}'"
+   },
+   "$clusterTime": {
+    "clusterTime": "Timestamp(1795548880, 8)",
+    "signature": {
+     "hash": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+     "keyId": 0
+    }
+   },
+   "$db": "shop"
+  },
+  "keysExamined": 0,
+  "docsExamined": 0,
+  "cursorExhausted": true,
+  "numYield": 0,
+  "nreturned": 0,
+  "queryShapeHash": "C3C14A1D7A7BD09A2B7F3CBEBBAC0640B93884BF8161E4880BD69CBE697466CF",
+  "queryFramework": "classic",
+  "locks": {
+   "Global": {
+    "acquireCount": {
+     "r": 2
+    }
+   }
+  },
+  "flowControl": {},
+  "readConcern": {
+   "level": "local",
+   "provenance": "implicitDefault"
+  },
+  "writeConcern": {
+   "w": "majority",
+   "wtimeout": 0,
+   "provenance": "implicitDefault"
+  },
+  "storage": {},
+  "responseLength": 228,
+  "protocol": "op_msg",
+  "cpuNanos": 573875,
+  "millis": 42,
+  "ts": "2026-11-24 19:34:40.724000",
+  "client": "172.17.0.2",
+  "appName": "local-dev",
+  "allUsers": [],
+  "user": ""
+ },
+ {
+  "op": "command",
+  "ns": "shop.orders",
+  "command": {
+   "explain": {
+    "find": "orders",
+    "filter": {
+     "amount": {
+      "$gte": 499.5
+     }
+    }
+   },
+   "lsid": {
+    "id": "b'k\\xbbn\\xe4\\x82\\x8cA\\xa8\\x9b\\xab\\xc9\\xce2\\x8f]\\xac'"
+   },
+   "$clusterTime": {
+    "clusterTime": "Timestamp(1795548880, 8)",
+    "signature": {
+     "hash": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+     "keyId": 0
+    }
+   },
+   "$db": "shop",
+   "$readPreference": {
+    "mode": "primaryPreferred"
+   }
+  },
+  "numYield": 2,
+  "planCacheShapeHash": "A6CC43B9",
+  "queryHash": "A6CC43B9",
+  "planCacheKey": "566B45C8",
+  "queryShapeHash": "243EB306D8FF82BA73B2EAD6E94C91970A912D4C6CE7425662E8D10420163985",
+  "queryFramework": "classic",
+  "locks": {
+   "Global": {
+    "acquireCount": {
+     "r": 4
+    }
+   }
+  },
+  "flowControl": {},
+  "readConcern": {
+   "level": "local",
+   "provenance": "implicitDefault"
+  },
+  "storage": {},
+  "responseLength": 1888,
+  "protocol": "op_msg",
+  "cpuNanos": 25736291,
+  "millis": 25,
+  "planningTimeMicros": 52,
+  "ts": "2026-11-24 19:34:40.747000",
+  "client": "172.17.0.1",
+  "allUsers": [],
+  "user": ""
+ },
+ {
+  "op": "command",
+  "ns": "shop.orders",
+  "command": {
+   "explain": {
+    "find": "orders",
+    "filter": {
+     "sku": {
+      "$regex": "42"
+     }
+    }
+   },
+   "lsid": {
+    "id": "b'k\\xbbn\\xe4\\x82\\x8cA\\xa8\\x9b\\xab\\xc9\\xce2\\x8f]\\xac'"
+   },
+   "$clusterTime": {
+    "clusterTime": "Timestamp(1795548880, 8)",
+    "signature": {
+     "hash": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+     "keyId": 0
+    }
+   },
+   "$db": "shop",
+   "$readPreference": {
+    "mode": "primaryPreferred"
+   }
+  },
+  "numYield": 2,
+  "planCacheShapeHash": "BBE2DD29",
+  "queryHash": "BBE2DD29",
+  "planCacheKey": "F5B5DC7F",
+  "queryShapeHash": "624320D73F3DE0744CC00C2F5F82B411A8143D7851BCE5C8F129A0CFBF0BA201",
+  "queryFramework": "classic",
+  "locks": {
+   "Global": {
+    "acquireCount": {
+     "r": 4
+    }
+   }
+  },
+  "flowControl": {},
+  "readConcern": {
+   "level": "local",
+   "provenance": "implicitDefault"
+  },
+  "storage": {},
+  "responseLength": 2583,
+  "protocol": "op_msg",
+  "cpuNanos": 42386875,
+  "millis": 42,
+  "planningTimeMicros": 73,
+  "ts": "2026-11-24 19:34:40.793000",
+  "client": "172.17.0.1",
+  "allUsers": [],
+  "user": ""
+ },
+ {
+  "op": "command",
+  "ns": "shop.orders",
+  "command": {
+   "explain": {
+    "find": "orders",
+    "filter": {},
+    "sort": {
+     "created_at": 1
+    },
+    "skip": 50000,
+    "limit": 20,
+    "singleBatch": true
+   },
+   "lsid": {
+    "id": "b'k\\xbbn\\xe4\\x82\\x8cA\\xa8\\x9b\\xab\\xc9\\xce2\\x8f]\\xac'"
+   },
+   "$clusterTime": {
+    "clusterTime": "Timestamp(1795548880, 8)",
+    "signature": {
+     "hash": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+     "keyId": 0
+    }
+   },
+   "$db": "shop",
+   "$readPreference": {
+    "mode": "primaryPreferred"
+   }
+  },
+  "numYield": 0,
+  "planCacheShapeHash": "F37FAD2D",
+  "queryHash": "F37FAD2D",
+  "planCacheKey": "C8A9BD99",
+  "queryShapeHash": "41B26FDE71069A41F65146B2DC4FA8372840EBD66DA85A50BED954449C9B31CC",
+  "queryFramework": "classic",
+  "locks": {
+   "Global": {
+    "acquireCount": {
+     "r": 2
+    }
+   }
+  },
+  "flowControl": {},
+  "readConcern": {
+   "level": "local",
+   "provenance": "implicitDefault"
+  },
+  "storage": {},
+  "responseLength": 3185,
+  "protocol": "op_msg",
+  "cpuNanos": 8134000,
+  "millis": 8,
+  "planningTimeMicros": 86,
+  "ts": "2026-11-24 19:34:40.802000",
+  "client": "172.17.0.1",
+  "allUsers": [],
+  "user": ""
+ },
+ {
+  "op": "command",
+  "ns": "shop.orders",
+  "command": {
+   "explain": {
+    "aggregate": "orders",
+    "cursor": {},
+    "pipeline": [
+     {
+      "$match": {
+       "region": "IN",
+       "status": "paid",
+       "amount": {
+        "$gt": 495
+       }
+      }
+     },
+     {
+      "$lookup": {
+       "from": "customers",
+       "localField": "customer_id",
+       "foreignField": "customer_id",
+       "as": "customer"
+      }
+     }
+    ]
+   },
+   "verbosity": "executionStats",
+   "lsid": {
+    "id": "b'k\\xbbn\\xe4\\x82\\x8cA\\xa8\\x9b\\xab\\xc9\\xce2\\x8f]\\xac'"
+   },
+   "$clusterTime": {
+    "clusterTime": "Timestamp(1795548880, 8)",
+    "signature": {
+     "hash": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+     "keyId": 0
+    }
+   },
+   "$db": "shop",
+   "$readPreference": {
+    "mode": "primaryPreferred"
+   }
+  },
+  "numYield": 15,
+  "planCacheShapeHash": "2D74919F",
+  "queryHash": "2D74919F",
+  "planCacheKey": "AC0739F9",
+  "queryShapeHash": "E026F7D998838605EFD360E77C23998E018CDBE5C648C41CA220CF585345FEA9",
+  "queryFramework": "sbe",
+  "locks": {
+   "Global": {
+    "acquireCount": {
+     "r": 17
+    }
+   }
+  },
+  "flowControl": {},
+  "readConcern": {
+   "level": "local",
+   "provenance": "implicitDefault"
+  },
+  "storage": {},
+  "responseLength": 11472,
+  "protocol": "op_msg",
+  "cpuNanos": 266243790,
+  "millis": 266,
+  "planSummary": "IXSCAN { status: 1, amount: 1, created_at: 1 }",
+  "planningTimeMicros": 921,
+  "ts": "2026-11-24 19:34:41.070000",
+  "client": "172.17.0.1",
+  "allUsers": [],
+  "user": ""
+ },
+ {
+  "op": "query",
+  "ns": "shop.orders",
+  "command": {
+   "find": "orders",
+   "filter": {
+    "amount": {
+     "$gte": 499.5
+    }
+   },
+   "lsid": {
+    "id": "b'k\\xbbn\\xe4\\x82\\x8cA\\xa8\\x9b\\xab\\xc9\\xce2\\x8f]\\xac'"
+   },
+   "$clusterTime": {
+    "clusterTime": "Timestamp(1795548880, 8)",
+    "signature": {
+     "hash": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+     "keyId": 0
+    }
+   },
+   "$db": "shop",
+   "$readPreference": {
+    "mode": "primaryPreferred"
+   }
+  },
+  "cursorid": 8174842350960760136,
+  "keysExamined": 0,
+  "docsExamined": 95870,
+  "nBatches": 1,
+  "numYield": 0,
+  "nreturned": 101,
+  "planCacheShapeHash": "A6CC43B9",
+  "queryHash": "A6CC43B9",
+  "planCacheKey": "566B45C8",
+  "queryShapeHash": "243EB306D8FF82BA73B2EAD6E94C91970A912D4C6CE7425662E8D10420163985",
+  "queryFramework": "classic",
+  "locks": {
+   "Global": {
+    "acquireCount": {
+     "r": 2
+    }
+   }
+  },
+  "flowControl": {},
+  "readConcern": {
+   "level": "local",
+   "provenance": "implicitDefault"
+  },
+  "storage": {},
+  "responseLength": 14059,
+  "protocol": "op_msg",
+  "cpuNanos": 12270125,
+  "millis": 12,
+  "planSummary": "COLLSCAN",
+  "planningTimeMicros": 53,
+  "execStats": {
+   "isCached": false,
+   "stage": "COLLSCAN",
+   "filter": {
+    "amount": {
+     "$gte": 499.5
+    }
+   },
+   "nReturned": 101,
+   "executionTimeMillisEstimate": 9,
+   "works": 95870,
+   "advanced": 101,
+   "needTime": 95769,
+   "needYield": 0,
+   "saveState": 1,
+   "restoreState": 0,
+   "isEOF": 0,
+   "direction": "forward",
+   "docsExamined": 95870
+  },
+  "ts": "2026-11-24 19:34:41.084000",
+  "client": "172.17.0.1",
+  "allUsers": [],
+  "user": ""
+ },
+ {
+  "op": "getmore",
+  "ns": "shop.orders",
+  "command": {
+   "getMore": 8174842350960760136,
+   "collection": "orders",
+   "lsid": {
+    "id": "b'k\\xbbn\\xe4\\x82\\x8cA\\xa8\\x9b\\xab\\xc9\\xce2\\x8f]\\xac'"
+   },
+   "$clusterTime": {
+    "clusterTime": "Timestamp(1795548880, 8)",
+    "signature": {
+     "hash": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+     "keyId": 0
+    }
+   },
+   "$db": "shop"
+  },
+  "originatingCommand": {
+   "find": "orders",
+   "filter": {
+    "amount": {
+     "$gte": 499.5
+    }
+   },
+   "lsid": {
+    "id": "b'k\\xbbn\\xe4\\x82\\x8cA\\xa8\\x9b\\xab\\xc9\\xce2\\x8f]\\xac'"
+   },
+   "$clusterTime": {
+    "clusterTime": "Timestamp(1795548880, 8)",
+    "signature": {
+     "hash": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+     "keyId": 0
+    }
+   },
+   "$db": "shop",
+   "$readPreference": {
+    "mode": "primaryPreferred"
+   }
+  },
+  "cursorid": 8174842350960760136,
+  "keysExamined": 0,
+  "docsExamined": 104130,
+  "nBatches": 1,
+  "cursorExhausted": true,
+  "numYield": 0,
+  "nreturned": 112,
+  "planCacheShapeHash": "A6CC43B9",
+  "queryHash": "A6CC43B9",
+  "planCacheKey": "566B45C8",
+  "queryFramework": "classic",
+  "locks": {
+   "Global": {
+    "acquireCount": {
+     "r": 2
+    }
+   }
+  },
+  "flowControl": {},
+  "readConcern": {
+   "level": "local",
+   "provenance": "implicitDefault"
+  },
+  "storage": {},
+  "responseLength": 15589,
+  "protocol": "op_msg",
+  "cpuNanos": 13008833,
+  "millis": 13,
+  "planSummary": "COLLSCAN",
+  "execStats": {
+   "isCached": false,
+   "stage": "COLLSCAN",
+   "filter": {
+    "amount": {
+     "$gte": 499.5
+    }
+   },
+   "nReturned": 213,
+   "executionTimeMillisEstimate": 16,
+   "works": 200001,
+   "advanced": 213,
+   "needTime": 199787,
+   "needYield": 0,
+   "saveState": 1,
+   "restoreState": 1,
+   "isEOF": 1,
+   "direction": "forward",
+   "docsExamined": 200000
+  },
+  "ts": "2026-11-24 19:34:41.097000",
+  "client": "172.17.0.1",
+  "allUsers": [],
+  "user": ""
+ },
+ {
+  "op": "getmore",
+  "ns": "shop.orders",
+  "command": {
+   "getMore": 750070760961350537,
+   "collection": "orders",
+   "lsid": {
+    "id": "b'k\\xbbn\\xe4\\x82\\x8cA\\xa8\\x9b\\xab\\xc9\\xce2\\x8f]\\xac'"
+   },
+   "$clusterTime": {
+    "clusterTime": "Timestamp(1795548880, 8)",
+    "signature": {
+     "hash": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+     "keyId": 0
+    }
+   },
+   "$db": "shop"
+  },
+  "originatingCommand": {
+   "find": "orders",
+   "filter": {
+    "sku": {
+     "$regex": "42"
+    }
+   },
+   "lsid": {
+    "id": "b'k\\xbbn\\xe4\\x82\\x8cA\\xa8\\x9b\\xab\\xc9\\xce2\\x8f]\\xac'"
+   },
+   "$clusterTime": {
+    "clusterTime": "Timestamp(1795548880, 8)",
+    "signature": {
+     "hash": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+     "keyId": 0
+    }
+   },
+   "$db": "shop",
+   "$readPreference": {
+    "mode": "primaryPreferred"
+   }
+  },
+  "cursorid": 750070760961350537,
+  "keysExamined": 189258,
+  "docsExamined": 3854,
+  "nBatches": 1,
+  "cursorExhausted": true,
+  "numYield": 2,
+  "nreturned": 3854,
+  "planCacheShapeHash": "BBE2DD29",
+  "queryHash": "BBE2DD29",
+  "planCacheKey": "F5B5DC7F",
+  "queryFramework": "classic",
+  "locks": {
+   "Global": {
+    "acquireCount": {
+     "r": 4
+    }
+   }
+  },
+  "flowControl": {},
+  "readConcern": {
+   "level": "local",
+   "provenance": "implicitDefault"
+  },
+  "storage": {},
+  "responseLength": 534227,
+  "protocol": "op_msg",
+  "cpuNanos": 38508875,
+  "millis": 38,
+  "planSummary": "IXSCAN { sku: 1 }",
+  "execStats": {
+   "isCached": false,
+   "stage": "FETCH",
+   "nReturned": 3955,
+   "executionTimeMillisEstimate": 22,
+   "works": 200001,
+   "advanced": 3955,
+   "needTime": 196045,
+   "needYield": 0,
+   "saveState": 3,
+   "restoreState": 3,
+   "isEOF": 1,
+   "docsExamined": 3955,
+   "alreadyHasObj": 0,
+   "inputStage": {
+    "stage": "IXSCAN",
+    "filter": {
+     "sku": {
+      "$regex": "42"
+     }
+    },
+    "nReturned": 3955,
+    "executionTimeMillisEstimate": 22,
+    "works": 200001,
+    "advanced": 3955,
+    "needTime": 196045,
+    "needYield": 0,
+    "saveState": 3,
+    "restoreState": 3,
+    "isEOF": 1,
+    "keyPattern": {
+     "sku": 1
+    },
+    "indexName": "sku_1",
+    "isMultiKey": false,
+    "multiKeyPaths": {
+     "sku": []
+    },
+    "isUnique": false,
+    "isSparse": false,
+    "isPartial": false,
+    "indexVersion": 2,
+    "direction": "forward",
+    "indexBounds": {
+     "sku": [
+      "[\"\", {})",
+      "[/42/, /42/]"
+     ]
+    },
+    "keysExamined": 200000,
+    "seeks": 1,
+    "dupsTested": 0,
+    "dupsDropped": 0
+   }
+  },
+  "ts": "2026-11-24 19:34:41.140000",
+  "client": "172.17.0.1",
+  "allUsers": [],
+  "user": ""
+ },
+ {
+  "op": "command",
+  "ns": "shop.orders",
+  "command": {
+   "explain": {
+    "find": "orders",
+    "filter": {
+     "amount": {
+      "$gte": 499.5
+     }
+    }
+   },
+   "lsid": {
+    "id": "b'k\\xbbn\\xe4\\x82\\x8cA\\xa8\\x9b\\xab\\xc9\\xce2\\x8f]\\xac'"
+   },
+   "$clusterTime": {
+    "clusterTime": "Timestamp(1795548880, 8)",
+    "signature": {
+     "hash": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+     "keyId": 0
+    }
+   },
+   "$db": "shop",
+   "$readPreference": {
+    "mode": "primaryPreferred"
+   }
+  },
+  "numYield": 1,
+  "planCacheShapeHash": "A6CC43B9",
+  "queryHash": "A6CC43B9",
+  "planCacheKey": "566B45C8",
+  "queryShapeHash": "243EB306D8FF82BA73B2EAD6E94C91970A912D4C6CE7425662E8D10420163985",
+  "queryFramework": "classic",
+  "locks": {
+   "Global": {
+    "acquireCount": {
+     "r": 3
+    }
+   }
+  },
+  "flowControl": {},
+  "readConcern": {
+   "level": "local",
+   "provenance": "implicitDefault"
+  },
+  "storage": {},
+  "responseLength": 1888,
+  "protocol": "op_msg",
+  "cpuNanos": 25289375,
+  "millis": 25,
+  "planningTimeMicros": 24,
+  "ts": "2026-11-24 19:34:41.174000",
+  "client": "172.17.0.1",
+  "allUsers": [],
+  "user": ""
+ },
+ {
+  "op": "command",
+  "ns": "shop.orders",
+  "command": {
+   "explain": {
+    "find": "orders",
+    "filter": {
+     "sku": {
+      "$regex": "42"
+     }
+    }
+   },
+   "lsid": {
+    "id": "b'k\\xbbn\\xe4\\x82\\x8cA\\xa8\\x9b\\xab\\xc9\\xce2\\x8f]\\xac'"
+   },
+   "$clusterTime": {
+    "clusterTime": "Timestamp(1795548880, 8)",
+    "signature": {
+     "hash": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+     "keyId": 0
+    }
+   },
+   "$db": "shop",
+   "$readPreference": {
+    "mode": "primaryPreferred"
+   }
+  },
+  "numYield": 3,
+  "planCacheShapeHash": "BBE2DD29",
+  "queryHash": "BBE2DD29",
+  "planCacheKey": "F5B5DC7F",
+  "queryShapeHash": "624320D73F3DE0744CC00C2F5F82B411A8143D7851BCE5C8F129A0CFBF0BA201",
+  "queryFramework": "classic",
+  "locks": {
+   "Global": {
+    "acquireCount": {
+     "r": 5
+    }
+   }
+  },
+  "flowControl": {},
+  "readConcern": {
+   "level": "local",
+   "provenance": "implicitDefault"
+  },
+  "storage": {},
+  "responseLength": 2583,
+  "protocol": "op_msg",
+  "cpuNanos": 40383708,
+  "millis": 40,
+  "planningTimeMicros": 30,
+  "ts": "2026-11-24 19:34:41.217000",
+  "client": "172.17.0.1",
+  "allUsers": [],
+  "user": ""
+ },
+ {
+  "op": "command",
+  "ns": "shop.orders",
+  "command": {
+   "explain": {
+    "find": "orders",
+    "filter": {},
+    "sort": {
+     "created_at": 1
+    },
+    "skip": 50000,
+    "limit": 20,
+    "singleBatch": true
+   },
+   "lsid": {
+    "id": "b'k\\xbbn\\xe4\\x82\\x8cA\\xa8\\x9b\\xab\\xc9\\xce2\\x8f]\\xac'"
+   },
+   "$clusterTime": {
+    "clusterTime": "Timestamp(1795548880, 8)",
+    "signature": {
+     "hash": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+     "keyId": 0
+    }
+   },
+   "$db": "shop",
+   "$readPreference": {
+    "mode": "primaryPreferred"
+   }
+  },
+  "numYield": 0,
+  "planCacheShapeHash": "F37FAD2D",
+  "queryHash": "F37FAD2D",
+  "planCacheKey": "C8A9BD99",
+  "queryShapeHash": "41B26FDE71069A41F65146B2DC4FA8372840EBD66DA85A50BED954449C9B31CC",
+  "queryFramework": "classic",
+  "locks": {
+   "Global": {
+    "acquireCount": {
+     "r": 2
+    }
+   }
+  },
+  "flowControl": {},
+  "readConcern": {
+   "level": "local",
+   "provenance": "implicitDefault"
+  },
+  "storage": {},
+  "responseLength": 3185,
+  "protocol": "op_msg",
+  "cpuNanos": 8028708,
+  "millis": 8,
+  "planningTimeMicros": 41,
+  "ts": "2026-11-24 19:34:41.226000",
+  "client": "172.17.0.1",
+  "allUsers": [],
+  "user": ""
+ },
+ {
+  "op": "command",
+  "ns": "shop.orders",
+  "command": {
+   "explain": {
+    "aggregate": "orders",
+    "cursor": {},
+    "pipeline": [
+     {
+      "$match": {
+       "region": "IN",
+       "status": "paid",
+       "amount": {
+        "$gt": 495
+       }
+      }
+     },
+     {
+      "$lookup": {
+       "from": "customers",
+       "localField": "customer_id",
+       "foreignField": "customer_id",
+       "as": "customer"
+      }
+     }
+    ]
+   },
+   "verbosity": "executionStats",
+   "lsid": {
+    "id": "b'k\\xbbn\\xe4\\x82\\x8cA\\xa8\\x9b\\xab\\xc9\\xce2\\x8f]\\xac'"
+   },
+   "$clusterTime": {
+    "clusterTime": "Timestamp(1795548880, 8)",
+    "signature": {
+     "hash": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+     "keyId": 0
+    }
+   },
+   "$db": "shop",
+   "$readPreference": {
+    "mode": "primaryPreferred"
+   }
+  },
+  "numYield": 17,
+  "planCacheShapeHash": "2D74919F",
+  "queryHash": "2D74919F",
+  "planCacheKey": "AC0739F9",
+  "queryShapeHash": "E026F7D998838605EFD360E77C23998E018CDBE5C648C41CA220CF585345FEA9",
+  "queryFramework": "sbe",
+  "locks": {
+   "Global": {
+    "acquireCount": {
+     "r": 19
+    }
+   }
+  },
+  "flowControl": {},
+  "readConcern": {
+   "level": "local",
+   "provenance": "implicitDefault"
+  },
+  "storage": {},
+  "responseLength": 11472,
+  "protocol": "op_msg",
+  "cpuNanos": 268047082,
+  "millis": 268,
+  "planSummary": "IXSCAN { status: 1, amount: 1, created_at: 1 }",
+  "planningTimeMicros": 975,
+  "ts": "2026-11-24 19:34:41.495000",
+  "client": "172.17.0.1",
+  "allUsers": [],
+  "user": ""
+ },
+ {
+  "op": "query",
+  "ns": "shop.orders",
+  "command": {
+   "find": "orders",
+   "filter": {
+    "amount": {
+     "$gte": 499.5
+    }
+   },
+   "lsid": {
+    "id": "b'k\\xbbn\\xe4\\x82\\x8cA\\xa8\\x9b\\xab\\xc9\\xce2\\x8f]\\xac'"
+   },
+   "$clusterTime": {
+    "clusterTime": "Timestamp(1795548880, 8)",
+    "signature": {
+     "hash": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+     "keyId": 0
+    }
+   },
+   "$db": "shop",
+   "$readPreference": {
+    "mode": "primaryPreferred"
+   }
+  },
+  "cursorid": 1699784612622901558,
+  "keysExamined": 0,
+  "docsExamined": 95870,
+  "nBatches": 1,
+  "numYield": 0,
+  "nreturned": 101,
+  "planCacheShapeHash": "A6CC43B9",
+  "queryHash": "A6CC43B9",
+  "planCacheKey": "566B45C8",
+  "queryShapeHash": "243EB306D8FF82BA73B2EAD6E94C91970A912D4C6CE7425662E8D10420163985",
+  "queryFramework": "classic",
+  "locks": {
+   "Global": {
+    "acquireCount": {
+     "r": 2
+    }
+   }
+  },
+  "flowControl": {},
+  "readConcern": {
+   "level": "local",
+   "provenance": "implicitDefault"
+  },
+  "storage": {},
+  "responseLength": 14059,
+  "protocol": "op_msg",
+  "cpuNanos": 12126833,
+  "millis": 12,
+  "planSummary": "COLLSCAN",
+  "planningTimeMicros": 53,
+  "execStats": {
+   "isCached": false,
+   "stage": "COLLSCAN",
+   "filter": {
+    "amount": {
+     "$gte": 499.5
+    }
+   },
+   "nReturned": 101,
+   "executionTimeMillisEstimate": 10,
+   "works": 95870,
+   "advanced": 101,
+   "needTime": 95769,
+   "needYield": 0,
+   "saveState": 1,
+   "restoreState": 0,
+   "isEOF": 0,
+   "direction": "forward",
+   "docsExamined": 95870
+  },
+  "ts": "2026-11-24 19:34:41.509000",
+  "client": "172.17.0.1",
+  "allUsers": [],
+  "user": ""
+ },
+ {
+  "op": "getmore",
+  "ns": "shop.orders",
+  "command": {
+   "getMore": 1699784612622901558,
+   "collection": "orders",
+   "lsid": {
+    "id": "b'k\\xbbn\\xe4\\x82\\x8cA\\xa8\\x9b\\xab\\xc9\\xce2\\x8f]\\xac'"
+   },
+   "$clusterTime": {
+    "clusterTime": "Timestamp(1795548880, 8)",
+    "signature": {
+     "hash": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+     "keyId": 0
+    }
+   },
+   "$db": "shop"
+  },
+  "originatingCommand": {
+   "find": "orders",
+   "filter": {
+    "amount": {
+     "$gte": 499.5
+    }
+   },
+   "lsid": {
+    "id": "b'k\\xbbn\\xe4\\x82\\x8cA\\xa8\\x9b\\xab\\xc9\\xce2\\x8f]\\xac'"
+   },
+   "$clusterTime": {
+    "clusterTime": "Timestamp(1795548880, 8)",
+    "signature": {
+     "hash": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+     "keyId": 0
+    }
+   },
+   "$db": "shop",
+   "$readPreference": {
+    "mode": "primaryPreferred"
+   }
+  },
+  "cursorid": 1699784612622901558,
+  "keysExamined": 0,
+  "docsExamined": 104130,
+  "nBatches": 1,
+  "cursorExhausted": true,
+  "numYield": 0,
+  "nreturned": 112,
+  "planCacheShapeHash": "A6CC43B9",
+  "queryHash": "A6CC43B9",
+  "planCacheKey": "566B45C8",
+  "queryFramework": "classic",
+  "locks": {
+   "Global": {
+    "acquireCount": {
+     "r": 2
+    }
+   }
+  },
+  "flowControl": {},
+  "readConcern": {
+   "level": "local",
+   "provenance": "implicitDefault"
+  },
+  "storage": {},
+  "responseLength": 15589,
+  "protocol": "op_msg",
+  "cpuNanos": 13038416,
+  "millis": 13,
+  "planSummary": "COLLSCAN",
+  "execStats": {
+   "isCached": false,
+   "stage": "COLLSCAN",
+   "filter": {
+    "amount": {
+     "$gte": 499.5
+    }
+   },
+   "nReturned": 213,
+   "executionTimeMillisEstimate": 18,
+   "works": 200001,
+   "advanced": 213,
+   "needTime": 199787,
+   "needYield": 0,
+   "saveState": 1,
+   "restoreState": 1,
+   "isEOF": 1,
+   "direction": "forward",
+   "docsExamined": 200000
+  },
+  "ts": "2026-11-24 19:34:41.522000",
+  "client": "172.17.0.1",
+  "allUsers": [],
+  "user": ""
+ },
+ {
+  "op": "getmore",
+  "ns": "shop.orders",
+  "command": {
+   "getMore": 2521964903443384259,
+   "collection": "orders",
+   "lsid": {
+    "id": "b'k\\xbbn\\xe4\\x82\\x8cA\\xa8\\x9b\\xab\\xc9\\xce2\\x8f]\\xac'"
+   },
+   "$clusterTime": {
+    "clusterTime": "Timestamp(1795548880, 8)",
+    "signature": {
+     "hash": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+     "keyId": 0
+    }
+   },
+   "$db": "shop"
+  },
+  "originatingCommand": {
+   "find": "orders",
+   "filter": {
+    "sku": {
+     "$regex": "42"
+    }
+   },
+   "lsid": {
+    "id": "b'k\\xbbn\\xe4\\x82\\x8cA\\xa8\\x9b\\xab\\xc9\\xce2\\x8f]\\xac'"
+   },
+   "$clusterTime": {
+    "clusterTime": "Timestamp(1795548880, 8)",
+    "signature": {
+     "hash": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+     "keyId": 0
+    }
+   },
+   "$db": "shop",
+   "$readPreference": {
+    "mode": "primaryPreferred"
+   }
+  },
+  "cursorid": 2521964903443384259,
+  "keysExamined": 189258,
+  "docsExamined": 3854,
+  "nBatches": 1,
+  "cursorExhausted": true,
+  "numYield": 2,
+  "nreturned": 3854,
+  "planCacheShapeHash": "BBE2DD29",
+  "queryHash": "BBE2DD29",
+  "planCacheKey": "F5B5DC7F",
+  "queryFramework": "classic",
+  "locks": {
+   "Global": {
+    "acquireCount": {
+     "r": 4
+    }
+   }
+  },
+  "flowControl": {},
+  "readConcern": {
+   "level": "local",
+   "provenance": "implicitDefault"
+  },
+  "storage": {},
+  "responseLength": 534227,
+  "protocol": "op_msg",
+  "cpuNanos": 39286291,
+  "millis": 39,
+  "planSummary": "IXSCAN { sku: 1 }",
+  "execStats": {
+   "isCached": false,
+   "stage": "FETCH",
+   "nReturned": 3955,
+   "executionTimeMillisEstimate": 34,
+   "works": 200001,
+   "advanced": 3955,
+   "needTime": 196045,
+   "needYield": 0,
+   "saveState": 3,
+   "restoreState": 3,
+   "isEOF": 1,
+   "docsExamined": 3955,
+   "alreadyHasObj": 0,
+   "inputStage": {
+    "stage": "IXSCAN",
+    "filter": {
+     "sku": {
+      "$regex": "42"
+     }
+    },
+    "nReturned": 3955,
+    "executionTimeMillisEstimate": 25,
+    "works": 200001,
+    "advanced": 3955,
+    "needTime": 196045,
+    "needYield": 0,
+    "saveState": 3,
+    "restoreState": 3,
+    "isEOF": 1,
+    "keyPattern": {
+     "sku": 1
+    },
+    "indexName": "sku_1",
+    "isMultiKey": false,
+    "multiKeyPaths": {
+     "sku": []
+    },
+    "isUnique": false,
+    "isSparse": false,
+    "isPartial": false,
+    "indexVersion": 2,
+    "direction": "forward",
+    "indexBounds": {
+     "sku": [
+      "[\"\", {})",
+      "[/42/, /42/]"
+     ]
+    },
+    "keysExamined": 200000,
+    "seeks": 1,
+    "dupsTested": 0,
+    "dupsDropped": 0
+   }
+  },
+  "ts": "2026-11-24 19:34:41.566000",
+  "client": "172.17.0.1",
+  "allUsers": [],
+  "user": ""
+ },
+ {
+  "op": "command",
+  "ns": "shop.products",
+  "command": {
+   "aggregate": "products",
+   "pipeline": [
+    {
+     "$listSearchIndexes": {
+      "name": "product_vectors"
+     }
+    }
+   ],
+   "cursor": {},
+   "lsid": {
+    "id": "b'k\\xbbn\\xe4\\x82\\x8cA\\xa8\\x9b\\xab\\xc9\\xce2\\x8f]\\xac'"
+   },
+   "$clusterTime": {
+    "clusterTime": "Timestamp(1795548880, 8)",
+    "signature": {
+     "hash": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+     "keyId": 0
+    }
+   },
+   "$db": "shop",
+   "$readPreference": {
+    "mode": "primaryPreferred"
+   }
+  },
+  "keysExamined": 0,
+  "docsExamined": 0,
+  "cursorExhausted": true,
+  "numYield": 0,
+  "nreturned": 1,
+  "queryShapeHash": "4A524B0BB0CD94BB5A65BCC76FC1964A5CB3C7C0CF3594839AC563AEF880524A",
+  "queryFramework": "classic",
+  "locks": {
+   "Global": {
+    "acquireCount": {
+     "r": 2
+    }
+   }
+  },
+  "flowControl": {},
+  "readConcern": {
+   "level": "local",
+   "provenance": "implicitDefault"
+  },
+  "writeConcern": {
+   "w": "majority",
+   "wtimeout": 0,
+   "provenance": "implicitDefault"
+  },
+  "storage": {},
+  "responseLength": 489,
+  "protocol": "op_msg",
+  "cpuNanos": 924250,
+  "millis": 5,
+  "ts": "2026-11-24 19:34:43.638000",
+  "client": "172.17.0.1",
+  "allUsers": [],
+  "user": ""
+ },
+ {
+  "op": "command",
+  "ns": "shop.products",
+  "command": {
+   "explain": {
+    "aggregate": "products",
+    "pipeline": [
+     {
+      "$vectorSearch": {
+       "index": "product_vectors",
+       "path": "embedding",
+       "queryVector": [
+        0.1,
+        -0.2,
+        0.3,
+        0.05,
+        -0.4,
+        0.2,
+        0.0,
+        0.1
+       ],
+       "numCandidates": 10,
+       "limit": 10
+      }
+     },
+     {
+      "$match": {
+       "category": "shoes"
+      }
+     },
+     {
+      "$project": {
+       "sku": 1,
+       "category": 1,
+       "score": {
+        "$meta": "vectorSearchScore"
+       }
+      }
+     }
+    ],
+    "cursor": {}
+   },
+   "verbosity": "executionStats",
+   "lsid": {
+    "id": "b'k\\xbbn\\xe4\\x82\\x8cA\\xa8\\x9b\\xab\\xc9\\xce2\\x8f]\\xac'"
+   },
+   "$clusterTime": {
+    "clusterTime": "Timestamp(1795548880, 8)",
+    "signature": {
+     "hash": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+     "keyId": 0
+    }
+   },
+   "$db": "shop",
+   "$readPreference": {
+    "mode": "primaryPreferred"
+   }
+  },
+  "numYield": 0,
+  "queryShapeHash": "8BF824848C4105C26C205F766531679E4950CA57CD626B7D6ADA1EB68A6303F0",
+  "queryFramework": "classic",
+  "locks": {
+   "Global": {
+    "acquireCount": {
+     "r": 2
+    }
+   }
+  },
+  "flowControl": {},
+  "readConcern": {
+   "level": "local",
+   "provenance": "implicitDefault"
+  },
+  "storage": {},
+  "responseLength": 3702,
+  "protocol": "op_msg",
+  "cpuNanos": 596041,
+  "millis": 98,
+  "ts": "2026-11-24 19:34:43.743000",
+  "client": "172.17.0.1",
+  "allUsers": [],
+  "user": ""
+ }
+]

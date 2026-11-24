@@ -1,0 +1,45 @@
+name: test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  unit:
+    runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        python: ["3.9", "3.11", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Analyzer tests (standard library only)
+        run: python -m unittest discover -s tests -v
+
+  live-mongodb:
+    # Re-capture every example from a fresh MongoDB 8.0 (Atlas Local, with vector search), check the analyzer
+    # still understands the server's current output, then apply its recommendations and measure the difference.
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Start MongoDB Atlas Local
+        run: |
+          docker run -d --name mqa-mongo -p 27018:27017 mongodb/mongodb-atlas-local:8.0
+          for i in $(seq 1 60); do
+            [ "$(docker inspect -f '{{.State.Health.Status}}' mqa-mongo)" = healthy ] && break; sleep 3
+          done
+      - name: Capture examples from the live server
+        run: |
+          pip install "pymongo>=4.10,<5"
+          python examples/capture_examples.py "mongodb://localhost:27018/?directConnection=true"
+          docker logs mqa-mongo 2>&1 | grep '"Slow query"' | grep '"shop\.' > examples/shop/mongod.log
+      - name: Tests against the fresh capture
+        run: python -m unittest discover -s tests -v
+      - name: Apply recommendations and measure before/after
+        run: python examples/verify_fixes.py "mongodb://localhost:27018/?directConnection=true" | tee -a "$GITHUB_STEP_SUMMARY"

@@ -1,0 +1,138 @@
+{
+ "explainVersion": "1",
+ "queryPlanner": {
+  "namespace": "shop.orders",
+  "parsedQuery": {
+   "sku": {
+    "$regex": "42"
+   }
+  },
+  "indexFilterSet": false,
+  "queryHash": "BBE2DD29",
+  "planCacheShapeHash": "BBE2DD29",
+  "planCacheKey": "F5B5DC7F",
+  "optimizationTimeMillis": 0,
+  "maxIndexedOrSolutionsReached": false,
+  "maxIndexedAndSolutionsReached": false,
+  "maxScansToExplodeReached": false,
+  "prunedSimilarIndexes": false,
+  "winningPlan": {
+   "isCached": false,
+   "stage": "FETCH",
+   "inputStage": {
+    "stage": "IXSCAN",
+    "filter": {
+     "sku": {
+      "$regex": "42"
+     }
+    },
+    "keyPattern": {
+     "sku": 1
+    },
+    "indexName": "sku_1",
+    "isMultiKey": false,
+    "multiKeyPaths": {
+     "sku": []
+    },
+    "isUnique": false,
+    "isSparse": false,
+    "isPartial": false,
+    "indexVersion": 2,
+    "direction": "forward",
+    "indexBounds": {
+     "sku": [
+      "[\"\", {})",
+      "[/42/, /42/]"
+     ]
+    }
+   }
+  },
+  "rejectedPlans": []
+ },
+ "executionStats": {
+  "executionSuccess": true,
+  "nReturned": 3955,
+  "executionTimeMillis": 40,
+  "totalKeysExamined": 200000,
+  "totalDocsExamined": 3955,
+  "executionStages": {
+   "isCached": false,
+   "stage": "FETCH",
+   "nReturned": 3955,
+   "executionTimeMillisEstimate": 34,
+   "works": 200001,
+   "advanced": 3955,
+   "needTime": 196045,
+   "needYield": 0,
+   "saveState": 3,
+   "restoreState": 3,
+   "isEOF": 1,
+   "docsExamined": 3955,
+   "alreadyHasObj": 0,
+   "inputStage": {
+    "stage": "IXSCAN",
+    "filter": {
+     "sku": {
+      "$regex": "42"
+     }
+    },
+    "nReturned": 3955,
+    "executionTimeMillisEstimate": 34,
+    "works": 200001,
+    "advanced": 3955,
+    "needTime": 196045,
+    "needYield": 0,
+    "saveState": 3,
+    "restoreState": 3,
+    "isEOF": 1,
+    "keyPattern": {
+     "sku": 1
+    },
+    "indexName": "sku_1",
+    "isMultiKey": false,
+    "multiKeyPaths": {
+     "sku": []
+    },
+    "isUnique": false,
+    "isSparse": false,
+    "isPartial": false,
+    "indexVersion": 2,
+    "direction": "forward",
+    "indexBounds": {
+     "sku": [
+      "[\"\", {})",
+      "[/42/, /42/]"
+     ]
+    },
+    "keysExamined": 200000,
+    "seeks": 1,
+    "dupsTested": 0,
+    "dupsDropped": 0
+   }
+  },
+  "allPlansExecution": []
+ },
+ "queryShapeHash": "624320D73F3DE0744CC00C2F5F82B411A8143D7851BCE5C8F129A0CFBF0BA201",
+ "command": {
+  "find": "orders",
+  "filter": {
+   "sku": {
+    "$regex": "42"
+   }
+  },
+  "$db": "shop"
+ },
+ "serverParameters": {
+  "internalQueryFacetBufferSizeBytes": 104857600,
+  "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+  "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+  "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+  "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+  "internalQueryProhibitBlockingMergeOnMongoS": 0,
+  "internalQueryMaxAddToSetBytes": 104857600,
+  "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+  "internalQueryFrameworkControl": "trySbeRestricted",
+  "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+ },
+ "ok": 1.0
+}
